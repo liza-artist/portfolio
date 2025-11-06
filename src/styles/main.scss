@@ -492,7 +492,7 @@ body{
             font-size: 28px;
             margin-bottom: 69px;
         }
-       /*  &::after{
+        &::after{
             display: block;
             content: '';
             width: 465px;
@@ -503,11 +503,11 @@ body{
             background-size: contain;
             position: absolute;
             z-index: 1;
-            top: -20em;
+            top: 0em;
             left: 0;
             right: 0;
             margin: 0 auto;
-        } */
+        }
     }
     
     &__item{
