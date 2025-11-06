@@ -21,6 +21,71 @@ body{
 }
 
 
+.title-span{
+        display: block;
+        font-size: 74px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-top: 50px;
+        @media (max-width: $r_mobile_400){
+            font-size: 28px;
+            margin-top: 22px;
+        }
+    }
+
+.title{
+    font-size: 28px;
+    font-weight: 400;
+    color: $gray;
+    line-height: $letterDistance;
+    letter-spacing: 0.013em;
+    position: relative;
+    margin-top: 20px;
+    @media (max-width: $r_mobile_400){
+        font-size: 18px;
+    }
+    &::before{
+        display: block;
+        content: '';
+        width: 67px;
+        height: 72px;
+        background-image: url(../images/figure/triangle.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: -5.2em;
+        top: -0.7em;
+        @media (max-width: $r_mobile_400){
+            width: 30px;
+            height: 33px;
+            left: 0em;
+            top: 5.5em;
+        }
+    }
+    &::after{
+        display: block;
+        content: '';
+        width: 253px;
+        height: 253px;
+        background-image: url(../images/figure/circle.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -2em;
+        left: -4.5em;
+        z-index: -1;
+        @media (max-width: $r_mobile_400){
+            width: 135px;
+            height: 135px;
+            top: -1.4em;
+            left: -2.8em;
+        }
+    }
+}
+
 .title-h2 {
     font-size: 28px;
     font-weight: 700;
@@ -290,70 +355,7 @@ body{
     max-width: 238px;
 }
 
-.title-span{
-        display: block;
-        font-size: 74px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-        margin-top: 50px;
-        @media (max-width: $r_mobile_400){
-            font-size: 28px;
-            margin-top: 22px;
-        }
-    }
 
-.title{
-    font-size: 28px;
-    font-weight: 400;
-    color: $gray;
-    line-height: $letterDistance;
-    letter-spacing: 0.013em;
-    position: relative;
-    margin-top: 20px;
-    @media (max-width: $r_mobile_400){
-        font-size: 18px;
-    }
-    &::before{
-        display: block;
-        content: '';
-        width: 67px;
-        height: 72px;
-        background-image: url(../images/figure/triangle.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        left: -5.2em;
-        top: -0.7em;
-        @media (max-width: $r_mobile_400){
-            width: 30px;
-            height: 33px;
-            left: 0em;
-            top: 5.5em;
-        }
-    }
-    &::after{
-        display: block;
-        content: '';
-        width: 253px;
-        height: 253px;
-        background-image: url(../images/figure/circle.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        top: -2em;
-        left: -4.5em;
-        z-index: -1;
-        @media (max-width: $r_mobile_400){
-            width: 135px;
-            height: 135px;
-            top: -1.4em;
-            left: -2.8em;
-        }
-    }
-}
 
 .about{
     margin-bottom: 160px;
@@ -430,11 +432,18 @@ body{
         margin-bottom: 82px;
     }
     &__title{
+        font-weight: 400;
+        >span{
+            padding-right: 45px;
             @media(max-width: $r_mobile_400){
-                padding-right: 4px;
-                margin-bottom: 69px;
+                padding-right: 12px;
             }
         }
+        @media(max-width: $r_mobile_400){
+            padding-right: 4px;
+            margin-bottom: 69px;
+        }
+    }
         
     &__item{
         display: flex;
