@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelectorAll(".pricing-plans__price").forEach((e,c)=>{c%2!=0&&e.classList.add("hidden-after")})})();

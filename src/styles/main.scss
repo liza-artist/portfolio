@@ -28,6 +28,10 @@ body{
         text-transform: uppercase;
         letter-spacing: 0.02em;
         margin-top: 50px;
+        @media (max-width: $r_tab_820){
+            font-size: 50px;
+            margin-top: 20px;
+        }
         @media (max-width: $r_mobile_400){
             font-size: 28px;
             margin-top: 22px;
@@ -93,6 +97,9 @@ body{
     text-transform: uppercase;
     letter-spacing: 0.02em;
     margin: 0;
+    @media (max-width: $r_tab_820){
+        font-size: 20px;
+    }
     @media(max-width: $r_mobile_400){
        font-size: 16px;
     }
@@ -186,24 +193,12 @@ body{
   
 }
 
-/* .connection__link {
-            &::after{
-                content: '|';
-                width: 1px;
-                height: 24px;
-                color: $light;
-                background-repeat: no-repeat;
-                background-size: contain;
-                margin: 0 13px;
-                &:last-child{
-                    display: none;
-                    margin: 0;
-                }
-            }
-} */
 
 .hero{
     margin-bottom: 159px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         margin-bottom: 70px;
     }
@@ -314,6 +309,9 @@ body{
         padding-top: 42px;
         border-top: 1px solid $gray;
         gap: 20px;
+        @media (max-width: $r_tab_820){
+            grid-template-columns: repeat(2, 1fr);
+        }
         @media(max-width: $r_mobile_400){
             grid-template-columns: repeat(2, 1fr);
             padding-top: 28px;
@@ -359,17 +357,17 @@ body{
 
 .about{
     margin-bottom: 160px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         margin-bottom:  47px;
     }
     &__box{
         display: flex;
-        justify-content: space-between;
-    }
-    &__box-empty{
-        flex-basis: 50%;
-        @media(max-width: $r_mobile_400){
-            display: none;
+        justify-content: end;
+        @media (max-width: $r_desk){
+            justify-content: space-between;
         }
     }
     &__header-box{
@@ -396,6 +394,9 @@ body{
         line-height: 146%;
         color: $grayWithOpacity;
         margin: 0;
+         @media (max-width: $r_tab_820){
+            font-size: 22px;
+        }
         @media(max-width: $r_mobile_400){
             font-size: 16px;
             line-height: $letterDistance;
@@ -407,6 +408,9 @@ body{
         max-width: 545px;
         gap: 42px 17px;
         margin-top: 59px;
+        @media (max-width: $r_desk){
+            max-width: inherit;
+        }
         @media(max-width: $r_mobile_400){
             margin-top: 40px;
             gap: 18px 20px;
@@ -428,6 +432,9 @@ body{
 
 .steps {
     margin-bottom: 179px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         margin-bottom: 82px;
     }
@@ -478,6 +485,9 @@ body{
 
 .portfolio{
     margin-bottom: 175px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
        margin-bottom: 80px;
     }
@@ -488,6 +498,11 @@ body{
         text-transform: uppercase;
         margin-bottom: 139px;
         position: relative;
+        z-index: 1;
+        @media (max-width: $r_tab_820){
+            font-size: 50px;
+            margin-bottom: 80px;
+        }
         @media(max-width: $r_mobile_400){
             font-size: 28px;
             margin-bottom: 69px;
@@ -502,14 +517,26 @@ body{
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            z-index: 1;
+            z-index: -1;
             top: 0em;
             left: 0;
             right: 0;
             margin: 0 auto;
-        }
+            @media (max-width: $r_tab_820){
+                width: 300px;
+                height: 300px;
+                top: -1em;
+                left: 2em;
+            }
+             @media(max-width: $r_mobile_400){
+                width: 197px;
+                height: 197px;
+                top: -1.4em;
+                right: -4.9em;
+            
+            }
     }
-    
+}
     &__item{
         display: flex;
         align-items: center;
@@ -517,6 +544,9 @@ body{
         padding-top: 59px;
         padding-bottom: 57px;
         border-bottom: 1px solid $gray;
+        position: relative;
+        z-index: 2;
+        gap: 20px;
         @media(max-width: $r_mobile_400){
             flex-direction: column;
             padding-top: 42px;
@@ -600,6 +630,9 @@ body{
         height: 307px;
         background-repeat: no-repeat;
         background-size: cover;
+        @media (max-width: $r_tab_820){
+            height: 213px;
+        }
          @media(max-width: $r_mobile_400){
             width: 100%;
             max-width: 340px;
@@ -617,6 +650,9 @@ body{
 
 .additional-service{
     margin-bottom: 172px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         margin-bottom: 57px;
     }
@@ -644,8 +680,10 @@ body{
         gap: 76px 20px;
         padding-top: 80px;
         border-top: 1px solid $gray;
-        @media(max-width: $r_mobile_400){
+        @media(max-width: ($r_mobile_600 + 40px)){
             grid-template-columns: repeat(1, 1fr);
+        }
+        @media(max-width: $r_mobile_400){
             padding-top: 41px;
             gap: 31px;
         }
@@ -708,7 +746,10 @@ body{
     margin-bottom: 175px;
     border-top: 1px solid $gray;
     border-left: 1px solid $gray;
-    
+    @media (max-width: $r_tab_820){
+        grid-template-rows: repeat(2, 100px);
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         grid-template-rows: repeat(2, 43px);
         margin-bottom: 80px;
@@ -719,6 +760,9 @@ body{
         place-items: center;
         border-bottom: 1px solid $gray;
         border-right: 1px solid $gray;
+        @media(max-width: $r_tab_820){
+            padding: 20px 0 20px 0;
+        }
         @media(max-width: $r_mobile_400){
             padding: 10px 0 10px 0;
         }
@@ -732,6 +776,10 @@ body{
         background-image: url(../images/stack/01.svg);
         width: 77px;
         height: 84px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 23px;
             height: 25px;
@@ -741,6 +789,10 @@ body{
         background-image: url(../images/stack/02.svg);
         width: 76px;
         height: 82px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 23px;
             height: 25px;
@@ -750,6 +802,10 @@ body{
         background-image: url(../images/stack/03.svg);
         width: 72px;
         height: 77px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 22px;
             height: 23px;
@@ -759,6 +815,10 @@ body{
         background-image: url(../images/stack/04.svg);
         width: 76px;
         height: 82px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 23px;
             height: 25px;
@@ -768,6 +828,10 @@ body{
         background-image: url(../images/stack/05.svg);
         width: 71px;
         height: 71px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 22px;
             height: 22px;
@@ -777,6 +841,10 @@ body{
         background-image: url(../images/stack/06.svg);
         width: 105px;
         height: 55px;
+        @media(max-width: $r_tab_820){
+            width: 84px;
+            height: 44px;
+        }
         @media(max-width: $r_mobile_400){
             width: 32px;
             height: 17px;
@@ -786,6 +854,10 @@ body{
         background-image: url(../images/stack/07.svg);
         width: 81px;
         height: 70px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 25px;
             height: 21px;
@@ -795,6 +867,10 @@ body{
         background-image: url(../images/stack/08.svg);
         width: 74px;
         height: 74px;
+        @media(max-width: $r_tab_820){
+            width: 55px;
+            height: 62px;
+        }
         @media(max-width: $r_mobile_400){
             width: 23px;
             height: 23px;
@@ -804,6 +880,9 @@ body{
 
 .pricing-plans{
     margin-bottom: 180px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
     @media(max-width: $r_mobile_400){
         margin-bottom: 80px;
     }
@@ -813,6 +892,9 @@ body{
         padding-bottom: 77px;
         gap: 20px;
         border-bottom: 1px solid $gray;
+        @media(max-width: $r_tab_820){
+            padding-bottom: 40px;;
+        }
         @media(max-width: $r_mobile_400){
             flex-direction: column;
             padding-bottom: 30px;
@@ -826,6 +908,9 @@ body{
         line-height: 146%;
         margin: 0;
         flex-basis: 49%;
+        @media(max-width: $r_tab_820){
+             font-size: 22px;
+        }
          @media(max-width: $r_mobile_400){
             font-size: 16px;
         }
@@ -836,6 +921,10 @@ body{
         padding-top: 60px;
         padding-bottom: 62px;
         border-bottom: 1px solid $gray;
+        @media(max-width: $r_tab_820){
+            padding-top: 40px;
+            padding-bottom: 42px;
+        }
         @media(max-width: $r_mobile_400){
             padding-top: 41px;
             padding-bottom: 39px;
@@ -855,6 +944,9 @@ body{
         color: $gray;
         line-height: 142%;
         margin: 0;
+        @media(max-width: $r_tab_820){
+            font-size: 22px;
+        }
         @media(max-width: $r_mobile_400){
             font-size: 16px;
             line-height: 148%;
@@ -974,7 +1066,10 @@ body{
         color: $gray;
         margin: 0;
         position: relative;
-         @media(max-width: $r_mobile_400){
+        @media(max-width: $r_tab_820){
+            font-size: 28px;
+        }
+        @media(max-width: $r_mobile_400){
             font-size: 22px;
         }
         &::after{
@@ -990,6 +1085,12 @@ body{
             top: -0.5em;
             left: -1.1em;
             z-index: -1;
+            @media(max-width: $r_tab_820){
+                width: 70px;
+                height: 70px;
+                top: -0.7em;
+                left: -0.2em;
+            }
             @media(max-width: $r_mobile_400){
                 width: 40px;
                 height: 40px;
@@ -1001,9 +1102,13 @@ body{
     }
 }
 
+.pricing-plans__price.hidden-after::after{
+    display: none;
+}
+
 .form{
     flex-basis: 49%;
-    @media (max-width: 400px) {
+    @media (max-width: $r_mobile_600) {
         flex-basis: 100%;
         width: 100%;
     }
@@ -1011,7 +1116,7 @@ body{
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        @media (max-width: 400px) {
+        @media (max-width: $r_mobile_400) {
             flex-direction: column;
         }
     }
@@ -1022,7 +1127,10 @@ body{
         line-height: 150%;
         margin: 0;
         flex-basis: 49%;
-        @media (max-width: 400px) {
+        @media(max-width: $r_tab_820){
+            font-size: 22px;
+        }
+        @media (max-width: $r_mobile_400) {
             font-size: 16px;
             max-width: 300px;
         }
@@ -1035,7 +1143,12 @@ body{
         padding-top: 60px;
         border-top: 1px solid #fff;
         margin-top: 53px;
-        @media (max-width: 400px) {
+         @media(max-width: $r_mobile_600){
+            flex-direction: column-reverse;
+            gap: 40px;
+         }
+        @media (max-width: $r_mobile_400) {
+            gap: 0;
             padding-top: 41px;
             margin-top: 28px;
             flex-direction: column-reverse;
@@ -1045,8 +1158,10 @@ body{
         max-width: 197px;
     }
     &__box-link{
-        @media (max-width: 400px) {
+        @media(max-width: $r_mobile_600){
             margin: 0 auto;
+        }
+        @media (max-width: $r_mobile_400) {
             margin-top: 60px;
         }
     }
@@ -1056,7 +1171,7 @@ body{
         color: $grayWithOpacity;
         line-height: 150%;
         margin: 0;
-        @media (max-width: 400px) {
+        @media (max-width: $r_mobile_400) {
             font-size: 10px;
         }
     }
@@ -1068,7 +1183,7 @@ body{
         border: none;
         margin-top: 8px;
         margin-bottom: 17px;
-        @media (max-width: 400px) {
+        @media (max-width: $r_mobile_400) {
             width: 89%;
             font-size: 10px;
             padding: 22px 20px 22px 20px;
@@ -1085,7 +1200,7 @@ body{
         border: none;
         margin-top: 8px;
         margin-bottom: 39px;
-        @media (max-width: 400px) {
+        @media (max-width: $r_mobile_400) {
             font-size: 10px;
             padding: 21px 20px 21px 20px;
             margin-bottom: 31px;
@@ -1100,7 +1215,7 @@ body{
         background-color: $accent;
         padding: 24px 20px 21px 20px;
         border: none;
-         @media (max-width: 400px) {
+         @media (max-width: $r_mobile_400) {
             font-size: 12px;
             padding: 20px 20px 21px 20px;
         }
@@ -1120,6 +1235,12 @@ select::-ms-expand {
 
 .footer{
     margin-top: 125px;
+    @media (max-width: $r_tab_820){
+        margin-bottom: 100px;
+    }
+    @media (max-width: $r_mobile_600) {
+        margin-bottom: 60px;
+    }
     @media(max-width: $r_mobile_400){
         margin-top: 59px;
     }
@@ -1129,8 +1250,10 @@ select::-ms-expand {
         align-items: center;
         padding-top: 45px;
         border-top: 1px solid $gray;
-        @media(max-width: $r_mobile_400){
+        @media(max-width: $r_tab_820){
             flex-direction: column-reverse;
+        }
+        @media(max-width: $r_mobile_400){
             gap: 12px;
             padding-top: 46px;
         }
