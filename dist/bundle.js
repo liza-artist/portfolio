@@ -1,1 +1,1 @@
-(()=>{"use strict";document.querySelectorAll(".pricing-plans__price").forEach((e,c)=>{c%2!=0&&e.classList.add("hidden-after")})})();
+(()=>{"use strict";document.querySelectorAll(".pricing-plans__price").forEach((e,t)=>{t%2!=0&&e.classList.add("hidden-after")});const e=document.querySelector(".form__social-networks-arrow"),t=document.querySelector(".form__social-networks");let r=!1;function c(){r=!r,e.style.transform=r?"rotate(180deg)":"rotate(0deg)"}e.addEventListener("click",c),t.addEventListener("click",c)})();
