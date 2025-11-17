@@ -34,7 +34,7 @@
                 <h1 class="title">Александр Антропов<span class="title-span">web-разработчик</span></h1>
                 <div class="hero__info">
                     <div class="hero__info-box">
-                        <p class="hero__text">Обсудить проект</p>
+                        <button class="hero__get-offer">Обсудить проект</button>
                         <div class="hero__box-link">
                             <a href="" class="hero__link">Vk</a>
                             <a href="" class="hero__link">Youtube</a>
@@ -249,7 +249,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br>лэндинга&nbsp;или&nbsp;сайт визитки</h3>
                         <p class="pricing-plans__p">Небольшой сайт состоящий из одной страницы</p>
-                        <a href="#" class="pricing-plans__link">Обсудить проект</a>
+                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -265,7 +265,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br> корпоративного  сайта</h3>
                         <p class="pricing-plans__p">Небольшой сайт с n-количеством страниц</p>
-                        <a href="#" class="pricing-plans__link">Обсудить проект</a>
+                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -281,7 +281,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br> интернет - магазина</h3>
                         <p class="pricing-plans__p">Полноценный каталог вашей продукции</p>
-                        <a href="#" class="pricing-plans__link">Обсудить проект</a>
+                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -312,12 +312,17 @@
                     <p class="form__clue">Телефон или почта</p>
                     <input type="text" placeholder="Введите телефон" class="form__input">
                     <p class="form__clue">Выберите удобный способ связи</p>
-                    <select name="" id="" class="form__social-networks">
-                        <option value="Telegram">Telegram</option>
-                        <option value="Vk">Vk</option>
-                        <option value="Youtube">Youtube</option>
-                        <option value="Linkedin">Linkedin</option>
-                    </select>
+                    <div class="form__social-networks-box">
+                        <select name="" id="" class="form__social-networks">
+                            <option value="telegram">Telegram</option>
+                            <option value="whatsApp">WhatsApp</option>
+                            <option value="viber">Viber</option>
+                            <option value="tel">Звонок на телефон</option>
+                            <option value="sms">SMS сообщение</option>
+                        </select>
+                        <div class="form__social-networks-arrow"></div>
+                    </div>
+                    
                     <input type="button" value="Отправить" class="form__btn">
                 </form>
             </div>

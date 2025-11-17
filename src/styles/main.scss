@@ -156,6 +156,13 @@ body{
         letter-spacing: 0.02em;
         color: $light;
         text-decoration: none;
+        transition: color $tr;
+        cursor: pointer;
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
+        }
     }
     &__info{
         display: flex;
@@ -223,6 +230,7 @@ body{
          @media (max-width: $r_mobile_400){
             margin-top: 94px;
             margin-bottom: 31px;
+            align-items: inherit;
         }
     }
     &__box-link{
@@ -254,6 +262,13 @@ body{
         line-height: $letterDistance;
         color: $light;
         text-decoration: none;
+        transition: color $tr;
+        cursor: pointer;
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
+        }
         @media (max-width: $r_mobile_400){
             font-size: 12px;
         }
@@ -277,9 +292,16 @@ body{
                 }
         }
     }
-    &__text{
+    &__get-offer{
         position: relative;
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: $gray;
         letter-spacing: .05em;
+        line-height: 150%;
+        cursor: pointer;
         @media (max-width: $r_mobile_400){
             font-size: 12px;
         }
@@ -293,13 +315,29 @@ body{
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            right: -30px;
-            bottom: 3px;
+            right: -2.2em;
+            bottom: 1.3em;
             @media (max-width: $r_mobile_400){
                 width: 11px;
                 height: 10px;
-                right: -23px;
-                bottom: 1px;
+                right: -1.4em;
+                bottom: 1.6em;
+            }
+        }
+         &::after{
+            display: block;
+            content: '';
+            max-width: 170px;
+            width: 100%;
+            height: 2px;
+            background-color: $gray;
+            margin-top: 12px;
+            transition: $tr;
+            opacity: 0;
+        }
+        @media (hover: hover) {
+            &:hover::after {
+                opacity: 1;
             }
         }
     }
@@ -440,6 +478,8 @@ body{
     }
     &__title{
         font-weight: 400;
+        max-width: 360px;
+        width: 100%;
         >span{
             padding-right: 45px;
             @media(max-width: $r_mobile_400){
@@ -476,7 +516,8 @@ body{
         color: $grayWithOpacity;
         line-height: $letterDistance;
         margin: 0;
-        flex-basis: 49%;
+        max-width: 494px;
+        width: 100%;
         @media(max-width: $r_mobile_400){
             font-size: 12px;
         }
@@ -680,6 +721,9 @@ body{
         gap: 76px 20px;
         padding-top: 80px;
         border-top: 1px solid $gray;
+         @media(max-width: $r_tab){
+            grid-template-columns: repeat(2, 1fr);
+        }
         @media(max-width: ($r_mobile_600 + 40px)){
             grid-template-columns: repeat(1, 1fr);
         }
@@ -760,6 +804,7 @@ body{
         place-items: center;
         border-bottom: 1px solid $gray;
         border-right: 1px solid $gray;
+        position: relative;
         @media(max-width: $r_tab_820){
             padding: 20px 0 20px 0;
         }
@@ -771,11 +816,21 @@ body{
         background-repeat: no-repeat;
         background-size: contain;
         background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: $tr;
     }
     &__img-01{
         background-image: url(../images/stack/01.svg);
         width: 77px;
         height: 84px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/01.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -789,6 +844,11 @@ body{
         background-image: url(../images/stack/02.svg);
         width: 76px;
         height: 82px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/02.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -802,6 +862,11 @@ body{
         background-image: url(../images/stack/03.svg);
         width: 72px;
         height: 77px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/03.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -815,6 +880,11 @@ body{
         background-image: url(../images/stack/04.svg);
         width: 76px;
         height: 82px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/04.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -828,6 +898,11 @@ body{
         background-image: url(../images/stack/05.svg);
         width: 71px;
         height: 71px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/05.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -841,6 +916,11 @@ body{
         background-image: url(../images/stack/06.svg);
         width: 105px;
         height: 55px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/06.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 84px;
             height: 44px;
@@ -854,6 +934,11 @@ body{
         background-image: url(../images/stack/07.svg);
         width: 81px;
         height: 70px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/07.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -867,6 +952,11 @@ body{
         background-image: url(../images/stack/08.svg);
         width: 74px;
         height: 74px;
+        @media (hover: hover) {
+            &:hover {
+                background-image: url(../images/stack-color/08.svg);
+            }
+        }
         @media(max-width: $r_tab_820){
             width: 55px;
             height: 62px;
@@ -977,18 +1067,29 @@ body{
             margin-bottom: 1.3em;
         }
     }
-    &__link{
+    &__get-offer{
+        position: relative;
+        background-color: transparent;
+        border: none;
         font-size: 16px;
         font-weight: 700;
         color: $gray;
+        letter-spacing: .05em;
         line-height: 150%;
         margin: 0;
-        text-decoration: none;
         position: relative;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: opacity $tr;
+        @media (hover: hover) {
+            &:hover::after {
+                opacity: 1;
+            }
+        }
         @media(max-width: $r_mobile_400){
             font-size: 12px;
         }
-        &::after{
+        &::before{
             display: block;
             content: '';
             width: 16px;
@@ -998,7 +1099,7 @@ body{
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            top: .13em;
+            top: 0.43em;
             right: -2em;
              @media (max-width: $r_mobile_400){
                 width: 11px;
@@ -1006,6 +1107,17 @@ body{
                 top: 0.25em;
                 right: -2em;
             }
+        }
+        &::after{
+            display: block;
+            content: '';
+            max-width: 170px;
+            width: 100%;
+            height: 2px;
+            background-color: $gray;
+            margin-top: 12px;
+            transition: $tr;
+            opacity: 0;
         }
     }
     &__list{
@@ -1191,6 +1303,12 @@ body{
             margin-bottom: 21px;
         }
     }
+    &__social-networks-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
     &__social-networks{
         display: block;
         width: 100%;
@@ -1200,11 +1318,33 @@ body{
         border: none;
         margin-top: 8px;
         margin-bottom: 39px;
+        cursor: pointer;
+        >option{
+            color: #838383;
+            cursor: pointer;
+            @media(hover: hover){
+            &:hover{
+                color: $gray;
+            }
+        }
+        }
         @media (max-width: $r_mobile_400) {
             font-size: 10px;
             padding: 21px 20px 21px 20px;
             margin-bottom: 31px;
         }
+    }
+    &__social-networks-arrow{
+        width: 12px;
+        height: 7px;
+        background-image: url(../images/icon/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 2.6em;
+        right: 1.5em;
+        cursor: pointer;
+       transition: transform 0.3s ease-out;
     }
     &__btn{
         font-size: 16px;
@@ -1215,7 +1355,14 @@ body{
         background-color: $accent;
         padding: 24px 20px 21px 20px;
         border: none;
-         @media (max-width: $r_mobile_400) {
+        transition: $tr;
+        cursor: pointer;
+        @media(hover: hover){
+            &:hover{
+                background-color: $accent-hover;
+            }
+        }
+        @media (max-width: $r_mobile_400) {
             font-size: 12px;
             padding: 20px 20px 21px 20px;
         }
@@ -1284,6 +1431,13 @@ select::-ms-expand {
         font-size: 14px;
         font-weight: 400;
         color: $gray;
+        transition: color $tr;
+        cursor: pointer;
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
+        }
          @media(max-width: $r_mobile_400){
             font-size: 10px;
         }
@@ -1310,11 +1464,20 @@ select::-ms-expand {
         font-size: 12px;
         font-weight: 400;
         color: #626263;
+       
         @media(max-width: $r_mobile_400){
             font-size: 10px;
         }
         >span{
             text-decoration: underline; 
+            transition: color $tr;
+            cursor: pointer;
+       
+            @media(hover: hover){
+            &:hover{
+                color: $gray;
+            }
+        }
         }
     }
 }
