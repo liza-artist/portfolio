@@ -136,6 +136,9 @@ body{
             background-repeat: no-repeat;
             background-size: cover;
             cursor: pointer;
+            background-color: transparent;
+            border: none;
+            transition: $tr;
         }
 
     }
@@ -175,6 +178,7 @@ body{
         gap: 23px;
     }
 }
+
 .connection{
     &__link{
         position: relative;
@@ -199,7 +203,6 @@ body{
     }
   
 }
-
 
 .hero{
     margin-bottom: 159px;
@@ -390,7 +393,6 @@ body{
 .item4{
     max-width: 238px;
 }
-
 
 
 .about{
@@ -687,7 +689,6 @@ body{
         background-image: url(../images/02.jpg);
     }
     }
-
 
 .additional-service{
     margin-bottom: 172px;
@@ -1382,9 +1383,6 @@ select::-ms-expand {
 
 .footer{
     margin-top: 125px;
-    @media (max-width: $r_tab_820){
-        margin-bottom: 100px;
-    }
     @media (max-width: $r_mobile_600) {
         margin-bottom: 60px;
     }
@@ -1478,6 +1476,112 @@ select::-ms-expand {
                 color: $gray;
             }
         }
+        }
+    }
+}
+
+
+.modal{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    position: absolute;
+    top: -900px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    &__close{
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icon/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        margin: 0 0 40px auto;
+        transition: $tr;
+    }
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    &__link{
+        font-size: 26px;
+        font-weight: 400;
+        color: $gray;
+        line-height: $letterDistance;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid #4D4C4E;
+        width: 100%;
+        text-align: center;
+        transition: $tr;
+        &:last-child{
+            border-bottom: 1px solid #4D4C4E;
+        }
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
+        }
+    }
+    &__connection{
+        display: flex;
+        justify-content: center;
+        margin: 43px;
+        margin-bottom: 20px;
+
+    }
+    &__link-connection{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: $letterDistance;
+        color: $light;
+        text-decoration: none;
+        transition: color $tr;
+        cursor: pointer;
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
+        }
+        @media (max-width: $r_mobile_400){
+            font-size: 12px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                display: none;
+                margin: 0;
+            }
+        }
+        &::after{
+                content: '|';
+                width: 1px;
+                height: 32px;
+                color: $light;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin: 0 20px;
+                @media (max-width: $r_mobile_400){
+                    margin: 0 7.9px
+                }
+        }
+    }
+    &__box-link{
+        display: flex;
+        justify-content: center;
+    }
+    &__link-social{
+        font-size: 12px;
+        @media(hover: hover){
+            &:hover{
+                color: $accent;
+            }
         }
     }
 }

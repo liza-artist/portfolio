@@ -24,3 +24,14 @@ function toggleRotation() {
 
 arrow.addEventListener('click', toggleRotation);
 select.addEventListener('click', toggleRotation);
+
+
+// Menu
+
+let openModal =   function() {
+  document.getElementById("modal").style.top = "0px";
+}
+let closeModal =   function() {
+  document.getElementById("modal").style.top = "-900px";
+}
+

@@ -9,13 +9,13 @@
         <header>
             <div class="container">
                 <div class="header">
-                    <div class="header__info">
+                    <nav class="header__info">
                         <a href="#" class="header__link">Обо мне</a>
                         <a href="#" class="header__link">Портфолио</a>
                         <a href="#" class="header__link">Этапы работ</a>
                         <a href="#" class="header__link">Цены</a>
                         <a href="#" class="header__link">Обратная связь</a>
-                    </div>
+                    </nav>
                     <div class="header__connection">
                         <a href="#" class="header__link connection__link">8 923 777-77-77</a>
                         <a href="#" class="header__link connection__link">alexdev@gmail.com</a>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="header-mobile">
                     <a href="#" class="header__link connection__link">8 923 777-77-77</a>
-                    <div class="header-mobile__burger"></div>
+                    <button class="header-mobile__burger" onclick="openModal()"></button>
                 </div>
             </div>
         </header>
@@ -359,5 +359,25 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+        <button class="modal__close" onclick="closeModal()"></button>
+        <nav class="modal__nav">
+            <a href="#" class="modal__link">Обо мне</a>
+            <a href="#" class="modal__link">Портфолио</a>
+            <a href="#" class="modal__link">Этапы работ</a>
+            <a href="#" class="modal__link">Цены</a>
+            <a href="#" class="modal__link">Обратная связь</a>
+        </nav>
+        <div class="modal__connection">
+            <a href="#" class="modal__link-connection">8 923 777-77-77</a>
+            <a href="#" class="modal__link-connection">alexdev@gmail.com</a>
+        </div>
+        <div class="modal__box-link">
+            <a href="" class="modal__link-connection modal__link-social">Vk</a>
+            <a href="" class="modal__link-connection modal__link-social">Youtube</a>
+            <a href="" class="modal__link-connection modal__link-social">Linkedin</a>
+        </div>
+    </div>
 </body>
 </html>
