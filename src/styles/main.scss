@@ -124,6 +124,7 @@ body{
         justify-content: space-between;
         align-items: center;
         margin-top: 40px;
+       
     }
 
     &__burger{
@@ -806,6 +807,7 @@ body{
         border-bottom: 1px solid $gray;
         border-right: 1px solid $gray;
         position: relative;
+        z-index: 1;
         @media(max-width: $r_tab_820){
             padding: 20px 0 20px 0;
         }
@@ -822,6 +824,7 @@ body{
         transform: translateY(-50%);
         cursor: pointer;
         transition: $tr;
+        z-index: 1;
     }
     &__img-01{
         background-image: url(../images/stack/01.svg);
@@ -830,6 +833,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/01.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -848,6 +854,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/02.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -866,6 +875,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/03.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -884,6 +896,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/04.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -902,6 +917,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/05.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -917,9 +935,16 @@ body{
         background-image: url(../images/stack/06.svg);
         width: 105px;
         height: 55px;
+        >.tooltiptext{
+            transform: translateY(40%);
+            left: -6.3em;
+        }
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/06.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -938,6 +963,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/07.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -956,6 +984,9 @@ body{
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/08.svg);
+                .tooltiptext {
+                    visibility: visible;
+                }
             }
         }
         @media(max-width: $r_tab_820){
@@ -967,6 +998,24 @@ body{
             height: 23px;
         }
     }
+}
+
+.tooltiptext{
+    visibility: hidden; 
+    width: 202px;
+    padding: 27px 15px;
+    background-color: $accent;
+    font-size: 10px;
+    font-weight: 500;
+    color: $gray;
+    line-height: $letterDistance;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    transition: $tr;
+    top: 50%;
+    transform: translateY(50%);
+    left: -8em;
 }
 
 .pricing-plans{
