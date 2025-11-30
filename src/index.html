@@ -23,7 +23,7 @@
                 </div>
                 <div class="header-mobile">
                     <a href="#" class="header__link connection__link">8 923 777-77-77</a>
-                    <button class="header-mobile__burger" onclick="openModal()"></button>
+                    <button class="header-mobile__burger"></button>
                 </div>
             </div>
         </header>
@@ -262,7 +262,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br>лэндинга&nbsp;или&nbsp;сайт визитки</h3>
                         <p class="pricing-plans__p">Небольшой сайт состоящий из одной страницы</p>
-                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
+                        <button class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -278,7 +278,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br> корпоративного  сайта</h3>
                         <p class="pricing-plans__p">Небольшой сайт с n-количеством страниц</p>
-                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
+                        <button class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -294,7 +294,7 @@
                     <div class="pricing-plans__item-left">
                         <h3 class="pricing-plans__h3">Разработка<br> интернет - магазина</h3>
                         <p class="pricing-plans__p">Полноценный каталог вашей продукции</p>
-                        <button href="#" class="pricing-plans__get-offer">Обсудить проект</button>
+                        <button class="pricing-plans__get-offer">Обсудить проект</button>
                     </div>
                     <div class="pricing-plans__item-right">
                         <h4 class="pricing-plans__h4">Что входит</h4>
@@ -374,24 +374,50 @@
         </div>
     </footer>
 
-    <div class="modal" id="modal">
-        <button class="modal__close" onclick="closeModal()"></button>
-        <nav class="modal__nav">
-            <a href="#" class="modal__link">Обо мне</a>
-            <a href="#" class="modal__link">Портфолио</a>
-            <a href="#" class="modal__link">Этапы работ</a>
-            <a href="#" class="modal__link">Цены</a>
-            <a href="#" class="modal__link">Обратная связь</a>
+    <div class="menu" id="menu">
+        <button class="menu__close"></button>
+        <nav class="menu__nav">
+            <a href="#" class="menu__link">Обо мне</a>
+            <a href="#" class="menu__link">Портфолио</a>
+            <a href="#" class="menu__link">Этапы работ</a>
+            <a href="#" class="menu__link">Цены</a>
+            <a href="#" class="menu__link">Обратная связь</a>
         </nav>
-        <div class="modal__connection">
-            <a href="#" class="modal__link-connection">8 923 777-77-77</a>
-            <a href="#" class="modal__link-connection">alexdev@gmail.com</a>
+        <div class="menu__connection">
+            <a href="#" class="menu__link-connection">8 923 777-77-77</a>
+            <a href="#" class="menu__link-connection">alexdev@gmail.com</a>
         </div>
-        <div class="modal__box-link">
-            <a href="" class="modal__link-connection modal__link-social">Vk</a>
-            <a href="" class="modal__link-connection modal__link-social">Youtube</a>
-            <a href="" class="modal__link-connection modal__link-social">Linkedin</a>
+        <div class="menu__box-link">
+            <a href="" class="menu__link-connection menu__link-social">Vk</a>
+            <a href="" class="menu__link-connection menu__link-social">Youtube</a>
+            <a href="" class="menu__link-connection menu__link-social">Linkedin</a>
         </div>
+    </div>
+
+    <div class="modal" id="modal">
+         <button class="menu__close"></button>
+         <div class="modal__head">
+            <h2 class="modal__h2">Расскажите о&nbsp;своем проекте</h2>
+            <p class="modal__text">Заполните все поля, и&nbsp;я&nbsp;свяжусь с&nbsp;вами в&nbsp;ближайшее время</p>
+        </div>
+         
+          <form action="" class="form">
+                    <p class="form__clue">Телефон или почта</p>
+                    <input type="text" placeholder="Введите телефон" class="form__input">
+                    <p class="form__clue">Выберите удобный способ связи</p>
+                    <div class="form__social-networks-box">
+                        <select name="" id="" class="form__social-networks">
+                            <option value="telegram">Telegram</option>
+                            <option value="whatsApp">WhatsApp</option>
+                            <option value="viber">Viber</option>
+                            <option value="tel">Звонок на телефон</option>
+                            <option value="sms">SMS сообщение</option>
+                        </select>
+                        <div class="form__social-networks-arrow"></div>
+                    </div>
+                    
+                    <input type="button" value="Отправить" class="form__btn">
+                </form>
     </div>
 </body>
 </html>

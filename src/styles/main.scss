@@ -491,7 +491,6 @@ body{
         }
         @media(max-width: $r_mobile_400){
             padding-right: 4px;
-            margin-bottom: 69px;
         }
     }
         
@@ -508,6 +507,7 @@ body{
             padding-bottom: 17px;
             padding-right: 17px;
             gap: 24px;
+            align-items: center;
         }
         &:last-child{
             border-bottom: 1px solid #fff;
@@ -807,7 +807,6 @@ body{
         border-bottom: 1px solid $gray;
         border-right: 1px solid $gray;
         position: relative;
-        z-index: 1;
         @media(max-width: $r_tab_820){
             padding: 20px 0 20px 0;
         }
@@ -824,7 +823,6 @@ body{
         transform: translateY(-50%);
         cursor: pointer;
         transition: $tr;
-        z-index: 1;
     }
     &__img-01{
         background-image: url(../images/stack/01.svg);
@@ -914,6 +912,8 @@ body{
         background-image: url(../images/stack/05.svg);
         width: 71px;
         height: 71px;
+        position: relative;
+        z-index: -5;
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/05.svg);
@@ -935,6 +935,8 @@ body{
         background-image: url(../images/stack/06.svg);
         width: 105px;
         height: 55px;
+        position: relative;
+        z-index: -5;
         >.tooltiptext{
             transform: translateY(40%);
             left: -6.3em;
@@ -960,6 +962,8 @@ body{
         background-image: url(../images/stack/07.svg);
         width: 81px;
         height: 70px;
+        position: relative;
+        z-index: -5;
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/07.svg);
@@ -981,6 +985,8 @@ body{
         background-image: url(../images/stack/08.svg);
         width: 74px;
         height: 74px;
+        position: relative;
+        z-index: -5;
         @media (hover: hover) {
             &:hover {
                 background-image: url(../images/stack-color/08.svg);
@@ -1346,7 +1352,7 @@ body{
         margin-top: 8px;
         margin-bottom: 17px;
         @media (max-width: $r_mobile_400) {
-            width: 89%;
+            width: 88%;
             font-size: 10px;
             padding: 22px 20px 22px 20px;
             margin-top: 7px;
@@ -1394,7 +1400,10 @@ body{
         top: 2.6em;
         right: 1.5em;
         cursor: pointer;
-       transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out; 
+        @media (max-width: $r_mobile_400) {
+            top: 2em;
+        }
     }
     &__btn{
         font-size: 16px;
@@ -1530,7 +1539,7 @@ select::-ms-expand {
 }
 
 
-.modal{
+.menu{
     display: block;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -1631,6 +1640,49 @@ select::-ms-expand {
             &:hover{
                 color: $accent;
             }
+        }
+    }
+}
+
+.modal{
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    @media (max-width: $r_mobile_400) {
+        max-width: 360px;
+        padding: 10px;
+    }
+    &__head{
+        margin: 0 auto;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 40px;
+    }
+    &__h2{
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        color: $gray;
+        line-height: $letterDistance;
+        text-transform: uppercase;
+        margin: 0;
+        @media (max-width: $r_mobile_400) {
+            font-size: 16px;
+        }
+    }
+    &__text{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: $gray;
+        line-height: $letterDistance;
+        margin: 0 auto;
+        max-width: 370px;
+        margin-top: 15px;
+        @media (max-width: $r_mobile_400) {
+            margin-top: 20px;
         }
     }
 }

@@ -27,11 +27,16 @@ select.addEventListener('click', toggleRotation);
 
 
 // Menu
+const menuButton = document.querySelector('.header-mobile__burger')
+const menuClose = document.querySelector('.menu__close')
 
-let openModal =   function() {
-  document.getElementById("modal").style.top = "0px";
+let openMenu =   function() {
+  document.getElementById("menu").style.top = "0px";
 }
-let closeModal =   function() {
-  document.getElementById("modal").style.top = "-900px";
+let closeMenu =   function() {
+  document.getElementById("menu").style.top = "-900px";
 }
+
+menuButton.addEventListener('click',openMenu)
+menuClose.addEventListener('click',closeMenu)
 
