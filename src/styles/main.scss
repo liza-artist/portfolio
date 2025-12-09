@@ -5,6 +5,10 @@ body{
     font-family: $font;
     background-color: $dark;
     color: $light;
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
 }
 
 .container{
@@ -1541,6 +1545,7 @@ select::-ms-expand {
 
 .menu{
     display: block;
+    background-color: $dark;
     padding-top: 20px;
     padding-bottom: 40px;
     position: absolute;
@@ -1644,45 +1649,104 @@ select::-ms-expand {
     }
 }
 
-.modal{
-    display: none;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    @media (max-width: $r_mobile_400) {
-        max-width: 360px;
-        padding: 10px;
-    }
-    &__head{
-        margin: 0 auto;
-        align-items: center;
-        padding-bottom: 30px;
-        border-bottom: 1px solid $gray;
-        margin-bottom: 40px;
-    }
-    &__h2{
-        font-size: 22px;
-        font-weight: 700;
-        text-align: center;
-        color: $gray;
-        line-height: $letterDistance;
-        text-transform: uppercase;
-        margin: 0;
-        @media (max-width: $r_mobile_400) {
-            font-size: 16px;
-        }
-    }
-    &__text{
-        font-size: 16px;
-        font-weight: 400;
-        text-align: center;
-        color: $gray;
-        line-height: $letterDistance;
-        margin: 0 auto;
-        max-width: 370px;
-        margin-top: 15px;
-        @media (max-width: $r_mobile_400) {
-            margin-top: 20px;
-        }
-    }
+.body::after {
+	content: " ";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.modal-show .body::after {
+	opacity: 1;
+}
+.modal {
+  
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+	&__button {
+		text-align: end;
+	}
+	&__close {
+		width: 22px;
+		height: 22px;
+		background-image: url(../images/icon/close.svg);
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		
+	}
+	&__content {
+          box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		visibility: hidden;
+		transform: scale(0);
+		transition: transform 0.3s ease 0s;
+		background-color: #232326;
+		padding: 20px;
+		width: 100%;
+		max-width: 600px;
+		height: 572px;
+	.lock & {
+		visibility: visible;
+	}
+	}
+	&__text {
+		    border-bottom: 1px solid rgba(243, 242, 240, 0.5);
+		text-align: center;
+		padding: 0px 0px 30px 0px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin: 0px 0px 15px 0px;
+	}
+	&__deskription {
+		max-width: 371px;
+		margin: 0px auto;
+		line-height: 150%;
+		opacity: .8;
+	}
+}
+.modal__show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.modal__show .modal__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.modal__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

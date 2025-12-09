@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
         <header>
             <div class="container">
                 <div class="header">
@@ -394,14 +394,17 @@
         </div>
     </div>
 
-    <div class="modal" id="modal">
-         <button class="menu__close"></button>
-         <div class="modal__head">
-            <h2 class="modal__h2">Расскажите о&nbsp;своем проекте</h2>
-            <p class="modal__text">Заполните все поля, и&nbsp;я&nbsp;свяжусь с&nbsp;вами в&nbsp;ближайшее время</p>
-        </div>
-         
-          <form action="" class="form">
+    <div id="modal" class="modal">
+        <div class="modal__wrapper">
+            <div class="modal__content">
+                <div class="modal__button">
+                    <button type="button" class="modal__close"></button>
+                </div>
+                <div class="modal__text">
+                    <h3 class="modal__title">Расскажите о своем проекте</h3>
+                    <p class="modal__deskription">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                </div>
+                <form action="" class="form">
                     <p class="form__clue">Телефон или почта</p>
                     <input type="text" placeholder="Введите телефон" class="form__input">
                     <p class="form__clue">Выберите удобный способ связи</p>
@@ -414,10 +417,11 @@
                             <option value="sms">SMS сообщение</option>
                         </select>
                         <div class="form__social-networks-arrow"></div>
-                    </div>
-                    
+                    </div>                
                     <input type="button" value="Отправить" class="form__btn">
                 </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

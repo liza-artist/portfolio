@@ -40,3 +40,29 @@ let closeMenu =   function() {
 menuButton.addEventListener('click',openMenu)
 menuClose.addEventListener('click',closeMenu)
 
+
+
+//Modal
+const openModalBtn = document.querySelectorAll('.pricing-plans__get-offer, .hero__get-offer')
+const closeModalBtn = document.querySelector('.modal__close')
+
+const modal = document.querySelector('.modal')
+const body = document.querySelector('.body')
+
+function openModal () {
+  modal.classList.add('modal__show')
+  document.documentElement.classList.add('modal-show', 'lock')
+  body.style.paddingRight = '15px'
+}
+
+function closeModal () {
+  modal.classList.remove('modal__show')
+  document.documentElement.classList.remove('modal-show', 'lock')
+  body.style.paddingRight = '0px'
+}
+
+openModalBtn.forEach((item) => {
+  item.addEventListener('click', openModal)
+})
+
+closeModalBtn.addEventListener('click', closeModal)
