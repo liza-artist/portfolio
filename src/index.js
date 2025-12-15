@@ -1,3 +1,4 @@
+import 'normalize.css'
 import './styles/main.scss'
 
 const price = document.querySelectorAll('.pricing-plans__price')

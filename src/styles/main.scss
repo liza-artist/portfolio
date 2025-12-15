@@ -509,7 +509,7 @@ body{
         @media(max-width: $r_mobile_400){
             padding-top: 12px;
             padding-bottom: 17px;
-            padding-right: 17px;
+            /* padding-right: 17px; */
             gap: 24px;
             align-items: center;
         }
@@ -527,6 +527,8 @@ body{
         width: 100%;
         @media(max-width: $r_mobile_400){
             font-size: 12px;
+            display: flex;
+            justify-content: right;
         }
     }
 }
@@ -1071,6 +1073,7 @@ body{
         padding-top: 60px;
         padding-bottom: 62px;
         border-bottom: 1px solid $gray;
+        gap: 15px;
         @media(max-width: $r_tab_820){
             padding-top: 40px;
             padding-bottom: 42px;
@@ -1565,6 +1568,8 @@ select::-ms-expand {
         border: none;
         margin: 0 0 40px auto;
         transition: $tr;
+        padding-top: 20px;
+        padding-right: 10px;
     }
     &__nav{
         display: flex;
