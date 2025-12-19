@@ -13,7 +13,7 @@ body{
 
 .container{
     width: 100%;
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -31,14 +31,14 @@ body{
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.02em;
-        margin-top: 50px;
+        margin-top: 55px;
         @media (max-width: $r_tab_820){
             font-size: 50px;
             margin-top: 20px;
         }
         @media (max-width: $r_mobile_400){
             font-size: 28px;
-            margin-top: 22px;
+            margin-top: 24px;
         }
     }
 
@@ -63,8 +63,8 @@ body{
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        left: -5.2em;
-        top: -0.7em;
+        left: -5.4em;
+        top: -0.6em;
         @media (max-width: $r_mobile_400){
             width: 30px;
             height: 33px;
@@ -174,7 +174,7 @@ body{
     }
     &__info{
         display: flex;
-        gap: 26px;
+        gap: 28px;
     }
     &__connection{
         display: flex;
@@ -210,7 +210,7 @@ body{
 }
 
 .hero{
-    margin-bottom: 159px;
+    margin-bottom: 167px;
     @media (max-width: $r_tab_820){
         margin-bottom: 100px;
     }
@@ -219,9 +219,9 @@ body{
     }
     &__img{
         width: 100%;
-        height: 301px;
-        margin-top: 60px;
-        margin-bottom: 93px;
+        height: 311px;
+        margin-top: 61px;
+        margin-bottom: 96px;
         object-fit: cover;
         @media(max-width: $r_mobile_400){
             height: 215px;
@@ -232,12 +232,12 @@ body{
     &__info-box{
         display: flex;
         justify-content: space-between;
-        margin-top: 107px;
+        margin-top: 122px;
         margin-bottom: 43px;
         align-items: center;
-         @media (max-width: $r_mobile_400){
-            margin-top: 94px;
-            margin-bottom: 31px;
+        @media (max-width: $r_mobile_400){
+            margin-top: 101px;
+            margin-bottom: 25px;
             align-items: inherit;
         }
     }
@@ -307,9 +307,10 @@ body{
         font-size: 16px;
         font-weight: 700;
         color: $gray;
-        letter-spacing: .05em;
+        letter-spacing: 0.02em;
         line-height: 150%;
         cursor: pointer;
+        padding-left: 0;
         @media (max-width: $r_mobile_400){
             font-size: 12px;
         }
@@ -323,13 +324,13 @@ body{
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            right: -2.2em;
+            right: -1.6em;
             bottom: 1.3em;
             @media (max-width: $r_mobile_400){
                 width: 11px;
                 height: 10px;
-                right: -1.4em;
-                bottom: 1.6em;
+                right: -1.2em;
+                bottom: 1.5em;
             }
         }
          &::after{
@@ -352,7 +353,7 @@ body{
     &__description{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding-top: 42px;
+        padding-top: 45px;
         border-top: 1px solid $gray;
         gap: 20px;
         @media (max-width: $r_tab_820){
@@ -401,12 +402,12 @@ body{
 
 
 .about{
-    margin-bottom: 160px;
+    margin-bottom: 157px;
     @media (max-width: $r_tab_820){
         margin-bottom: 100px;
     }
     @media(max-width: $r_mobile_400){
-        margin-bottom:  47px;
+        margin-bottom:  48px;
     }
     &__box{
         display: flex;
@@ -419,7 +420,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding-bottom: 58px;
+        padding-bottom: 60px;
         border-bottom: 1px solid $gray;
         @media(max-width: $r_mobile_400){
             flex-direction: column;
@@ -436,7 +437,7 @@ body{
         flex-basis: 49%;
         font-size: 28px;
         font-weight: 400;
-        line-height: 146%;
+        line-height: 149%;
         color: $grayWithOpacity;
         margin: 0;
          @media (max-width: $r_tab_820){
@@ -449,16 +450,16 @@ body{
     }
     &__info-box{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        max-width: 545px;
-        gap: 42px 17px;
-        margin-top: 59px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 559px;
+        gap: 49px 21px;
+        margin-top: 60px;
         @media (max-width: $r_desk){
             max-width: inherit;
         }
         @media(max-width: $r_mobile_400){
             margin-top: 40px;
-            gap: 18px 20px;
+            gap: 19px 14px;
         }
     }
     &__desc{
@@ -473,10 +474,42 @@ body{
             max-width: 149px;
         }   
     }
+    &__desc-01{
+        max-width: 210px;
+        line-height: 159%;
+        @media(max-width: $r_mobile_400){
+            max-width: 143px;
+            line-height: 148%;
+        }
+    }
+     &__desc-02{
+        max-width: 250px;
+        line-height: 160%;
+        @media(max-width: $r_mobile_400){
+            max-width: 156px;
+            line-height: 148%;
+        }
+    }
+     &__desc-03{
+        max-width: 210px;
+        line-height: 159%;
+        @media(max-width: $r_mobile_400){
+            max-width: 137px;
+            line-height: 145%;
+        }
+    }
+     &__desc-04{
+        max-width: 250px;
+        line-height: 159%;
+        @media(max-width: $r_mobile_400){
+            max-width: 143px;
+            line-height: 148%;
+        }
+    }
 }
 
 .steps {
-    margin-bottom: 179px;
+    margin-bottom: 183px;
     @media (max-width: $r_tab_820){
         margin-bottom: 100px;
     }
@@ -485,16 +518,19 @@ body{
     }
     &__title{
         font-weight: 400;
-        max-width: 360px;
+        max-width: 410px;
         width: 100%;
+        text-transform: none;
         >span{
-            padding-right: 45px;
+            padding-right: 37px;
             @media(max-width: $r_mobile_400){
-                padding-right: 12px;
+                padding-right: 8px;
             }
         }
         @media(max-width: $r_mobile_400){
             padding-right: 4px;
+            max-width: 140px;
+            line-height: 138%;
         }
     }
         
@@ -503,14 +539,13 @@ body{
         justify-content: space-between;
         align-items: center;
         border-top: 1px solid #fff;
-        padding-top: 29px;
-        padding-bottom: 27px;
+        padding-top: 32px;
+        padding-bottom: 28px;
         gap: 20px;
         @media(max-width: $r_mobile_400){
-            padding-top: 12px;
-            padding-bottom: 17px;
-            /* padding-right: 17px; */
-            gap: 24px;
+            padding-top: 15px;
+            padding-bottom: 14px;
+            gap: 27px;
             align-items: center;
         }
         &:last-child{
@@ -523,18 +558,31 @@ body{
         color: $grayWithOpacity;
         line-height: $letterDistance;
         margin: 0;
-        max-width: 494px;
+        max-width: 518px;
         width: 100%;
+        padding-right: 2.6em;
         @media(max-width: $r_mobile_400){
             font-size: 12px;
             display: flex;
             justify-content: right;
+            padding-right: 0.2em;
+        }
+    }
+    &__desc-02{
+        @media(max-width: $r_mobile_400){
+            max-width: 250px;
+        }
+    }
+    &__desc-03{
+        @media(max-width: $r_mobile_400){
+            max-width: 140px;
+            padding-right: 2.5em;
         }
     }
 }
 
 .portfolio{
-    margin-bottom: 175px;
+    margin-bottom: 178px;
     @media (max-width: $r_tab_820){
         margin-bottom: 100px;
     }
@@ -568,8 +616,8 @@ body{
             background-size: contain;
             position: absolute;
             z-index: -1;
-            top: 0em;
-            left: 0;
+            top: -1.3em;
+            left: 0.3em;
             right: 0;
             margin: 0 auto;
             @media (max-width: $r_tab_820){
@@ -581,8 +629,8 @@ body{
              @media(max-width: $r_mobile_400){
                 width: 197px;
                 height: 197px;
-                top: -1.4em;
-                right: -4.9em;
+                top: -1.3em;
+                right: -3.1em;
             
             }
     }
@@ -591,8 +639,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 59px;
-        padding-bottom: 57px;
+        padding-top: 62px;
+        padding-bottom: 59px;
         border-bottom: 1px solid $gray;
         position: relative;
         z-index: 2;
@@ -605,7 +653,10 @@ body{
     }
     &__item-bg{
         background-color: #141416;
-       
+        margin-top: 9em;
+        @media(max-width: $r_mobile_400){
+            margin-top: 4em;
+        }
     }
     
     &__info{
@@ -671,13 +722,13 @@ body{
         margin: 0;
          @media(max-width: $r_mobile_400){
             font-size: 12px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
     &__img{
-        max-width: 545px;
+        max-width: 562px;
         width: 100%;
-        height: 307px;
+        height: 315px;
         background-repeat: no-repeat;
         background-size: cover;
         @media (max-width: $r_tab_820){
@@ -698,18 +749,18 @@ body{
     }
 
 .additional-service{
-    margin-bottom: 172px;
+    margin-bottom: 185px;
     @media (max-width: $r_tab_820){
         margin-bottom: 100px;
     }
     @media(max-width: $r_mobile_400){
-        margin-bottom: 57px;
+        margin-bottom: 60px;
     }
     &__title{
         max-width: 870px;
         font-weight: 400;
         margin: 0;
-        padding-bottom: 73px;
+        padding-bottom: 79px;
         text-transform: none;
         @media(max-width: $r_mobile_400){
             padding-bottom: 39px;
@@ -720,7 +771,7 @@ body{
         align-items: center;
         gap: 30px;
         @media(max-width: $r_mobile_400){
-            gap: 40px;
+            gap: 31px;
         }
     }
     &__box{
@@ -759,6 +810,8 @@ body{
         @media(max-width: $r_mobile_400){
             font-size: 12px;
             margin-top: 16px;
+            max-width: 250px;
+            line-height: 147%;
         }
     }
     &__img{
@@ -794,8 +847,8 @@ body{
 .technology-stack{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 143px);
-    margin-bottom: 175px;
+    grid-template-rows: repeat(2, 147px);
+    margin-bottom: 181px;
     border-top: 1px solid $gray;
     border-left: 1px solid $gray;
     @media (max-width: $r_tab_820){
@@ -804,7 +857,7 @@ body{
     }
     @media(max-width: $r_mobile_400){
         grid-template-rows: repeat(2, 43px);
-        margin-bottom: 80px;
+        margin-bottom: 81px;
     }
     &__item{
         padding: 33px 0 33px 0;
@@ -1048,7 +1101,7 @@ body{
     &__header-box{
         display: flex;
         justify-content: space-between;
-        padding-bottom: 77px;
+        padding-bottom: 83px;
         gap: 20px;
         border-bottom: 1px solid $gray;
         @media(max-width: $r_tab_820){
@@ -1077,8 +1130,8 @@ body{
     &__item{
         display: flex;
         justify-content: space-between;
-        padding-top: 60px;
-        padding-bottom: 62px;
+        padding-top: 61px;
+        padding-bottom: 58px;
         border-bottom: 1px solid $gray;
         gap: 15px;
         @media(max-width: $r_tab_820){
@@ -1087,13 +1140,13 @@ body{
         }
         @media(max-width: $r_mobile_400){
             padding-top: 41px;
-            padding-bottom: 39px;
+            padding-bottom: 22px;
         }
         &:last-child{
         padding-bottom: 0;
         border-bottom: none;
             @media(max-width: $r_mobile_400){
-                padding-bottom: 39px;
+                padding-bottom: 24px;
                 border-bottom: 1px solid $gray;
             }
         }
@@ -1102,7 +1155,7 @@ body{
         font-size: 28px;
         font-weight: 400;
         color: $gray;
-        line-height: 142%;
+        line-height: 146%;
         margin: 0;
         @media(max-width: $r_tab_820){
             font-size: 22px;
@@ -1114,6 +1167,7 @@ body{
     }
     &__item-right{
         flex-basis: 49%;
+        padding-top: 3px;
         @media(max-width: $r_mobile_400){
             flex-basis: 50%;
         }
@@ -1130,7 +1184,7 @@ body{
         line-height: 150%;
         margin: 0;
         margin-top: 20px;
-        margin-bottom: 4.5em;
+        margin-bottom: 4.7em;
          @media(max-width: $r_mobile_400){
             font-size: 10px;
             max-width: 94px;
@@ -1139,6 +1193,7 @@ body{
     }
     &__get-offer{
         position: relative;
+        padding-left: 0;
         background-color: transparent;
         border: none;
         font-size: 16px;
@@ -1169,13 +1224,13 @@ body{
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            top: 0.43em;
-            right: -2em;
+            top: 0.53em;
+            right: -1.2em;
              @media (max-width: $r_mobile_400){
                 width: 11px;
                 height: 10px;
-                top: 0.25em;
-                right: -2em;
+                top: 0.45em;
+                right: -0.8em;
             }
         }
         &::after{
@@ -1192,13 +1247,18 @@ body{
     }
     &__list{
         margin-top: 30px;
-        margin-bottom: 3.2em;
-        padding-left: 16px;
+        margin-bottom: 3.4em;
+        padding-left: 14px;
         list-style-type: none;
         @media(max-width: $r_mobile_400){
             margin-top: 27px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
             padding-left: 7px;
+        }
+    }
+    &__list-03{
+        @media(max-width: $r_mobile_400){
+            margin-bottom: 24px;
         }
     }
     &__li{
@@ -1324,20 +1384,24 @@ body{
         align-items: flex-end;
         padding-top: 60px;
         border-top: 1px solid #fff;
-        margin-top: 53px;
+        margin-top: 60px;
          @media(max-width: $r_mobile_600){
             flex-direction: column-reverse;
             gap: 40px;
          }
         @media (max-width: $r_mobile_400) {
             gap: 0;
-            padding-top: 41px;
+            padding-top: 38px;
             margin-top: 28px;
             flex-direction: column-reverse;
         }
     }
     &__title{
-        max-width: 197px;
+        max-width: 282px;
+        @media (max-width: $r_mobile_400) {
+            max-width: 197px;
+        }
+        
     }
     &__box-link{
         @media(max-width: $r_mobile_600){
@@ -1370,7 +1434,7 @@ body{
             font-size: 10px;
             padding: 22px 20px 22px 20px;
             margin-top: 7px;
-            margin-bottom: 21px;
+            margin-bottom: 17px;
         }
     }
     &__social-networks-box{
@@ -1454,7 +1518,7 @@ select::-ms-expand {
 }
 
 .footer{
-    margin-top: 125px;
+    margin-top: 129px;
     @media (max-width: $r_mobile_600) {
         margin-bottom: 60px;
     }
@@ -1465,7 +1529,7 @@ select::-ms-expand {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 45px;
+        padding-top: 47px;
         border-top: 1px solid $gray;
         @media(max-width: $r_tab_820){
             flex-direction: column-reverse;
@@ -1521,7 +1585,7 @@ select::-ms-expand {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 27px;
         margin-bottom: 40px;
         @media(max-width: $r_mobile_400){
             flex-direction: column;
